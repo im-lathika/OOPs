@@ -1,0 +1,9 @@
+class Student extends User { 
+    public Student(String name) { 
+        super(name); 
+    } 
+ 
+    public void display() { 
+        System.out.println("Student: " + name); 
+    } 
+} 
