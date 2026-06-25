@@ -1,0 +1,52 @@
+import java.util.*;
+
+class Vehicle {
+    void displayDetails() {
+        System.out.println("Vehicle Details");
+    }
+}
+
+class Car extends Vehicle {
+
+    void displayDetails() {
+        System.out.println("Car Details");
+        System.out.println("Brand: Hyundai");
+        System.out.println("Year: 2022");
+        System.out.println("Number of Doors: 4");
+    }
+}
+
+class Bike extends Vehicle {
+    void displayDetails() {
+        System.out.println("Bike Details");
+        System.out.println("Brand: Yamaha");
+        System.out.println("Year: 2021");
+        System.out.println("Type: Sports");
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Vehicle v;
+
+        System.out.println("Welcome to Vehicle Management System");
+        System.out.println("1. Car");
+        System.out.println("2. Bike");
+        System.out.print("Enter your choice (1-2): ");
+
+        int choice = sc.nextInt();
+
+        if (choice == 1) {
+            v = new Car();
+            v.displayDetails();
+        } 
+        else if (choice == 2) {
+            v = new Bike();
+            v.displayDetails();
+        } 
+        else {
+            System.out.println("Invalid choice");
+        }
+    }
+}
